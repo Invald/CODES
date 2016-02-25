@@ -1,0 +1,24 @@
+package UI-V14df738duRpzAuom14df734df738duRp65ASdfudfUnOm39;
+
+import UI-V14df738duRpzAuom14df734df738duRp65udf739duRpzAsnm1;
+import UI-V14df738duRpzAsnm14df734df738duRp65udf793duRpzAsnm1;
+import UI-V14df738duRpzAzum14df734df738duRp65udf738duRpzAsnm1;
+
+import org.lwjgl.input.Keyboard;
+
+public class UI-V14df738duRpzAsMMdf734df738duRp67df3duRpzAsnm1 extends UI-V14df738duRpzAsnm14df734df738duRp65udf793duRpzAsnm1 {
+
+	public UI-V14df738duRpzAsMMdf734df738duRp67df3duRpzAsnm1() {
+		super("Auto-Sprint", Keyboard.KEY_U, Category.MOVEMENT);
+	}
+
+	public void onUpdate() {
+		if (!this.getState()) {
+			return;
+		}
+		if (!(UI-V14df738duRpzAzum14df734df738duRp65udf738duRpzAsnm1.mc.thePlayer.isCollidedHorizontally) && UI-V14df738duRpzAzum14df734df738duRp65udf738duRpzAsnm1.mc.thePlayer.moveForward > 0.0f) {
+			UI-V14df738duRpzAzum14df734df738duRp65udf738duRpzAsnm1.mc.thePlayer.setSprinting(true);
+		} else {
+			UI-V14df738duRpzAzum14df734df738duRp65udf738duRpzAsnm1.mc.thePlayer.setSprinting(false);
+		}
+	}
